@@ -1,0 +1,11 @@
+server:
+  port: 8003
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gms_orders?useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml

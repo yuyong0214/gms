@@ -1,0 +1,14 @@
+server:
+  port: 8002
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gms-pro
+    username: root
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: gms-pro-server
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
