@@ -1,6 +1,5 @@
 package com.yong.gmsorder.entity;
 
-    import java.time.LocalDateTime;
     import java.util.Date;
 
     import lombok.*;
@@ -19,4 +18,6 @@ public class Orders{
     private String productNo;
 
     private Date createTime;
+
+    private Integer purchase;
 }

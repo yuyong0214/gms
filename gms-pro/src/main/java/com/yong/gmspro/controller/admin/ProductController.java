@@ -6,9 +6,14 @@ import com.yong.gmspro.entity.Product;
 import com.yong.gmspro.service.impl.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: YUY
@@ -19,6 +24,13 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductServiceImpl productService;
+
+    @PostMapping("decrease")
+    @ResponseBody
+    public Map<String, String> decrease(@RequestParam("id") Long id,@RequestParam("num") Integer num){
+        Map<String, String> map = productService.decrease(id, num);
+        return map;
+    }
 
     @RequestMapping("list")
     public String productList(){

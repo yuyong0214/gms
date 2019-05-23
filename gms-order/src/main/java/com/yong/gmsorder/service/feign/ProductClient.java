@@ -8,5 +8,5 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @date: 2019/5/21 15:22
  */
 @FeignClient("gms-pro-server")
-public interface ProductService extends IOProductService {
+public interface ProductClient extends IOProductService {
 }

@@ -23,7 +23,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("orders")
 public class OrdersController {
-    @Autowired
+    @Autowired(required = false)
     private OrdersServiceImpl ordersService;
 
     @PostMapping("book")

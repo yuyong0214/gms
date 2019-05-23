@@ -1,5 +1,6 @@
 package com.yong.gmsproapi;
 
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -12,7 +13,7 @@ import java.util.Map;
  * @date: 2019/5/21 10:59
  */
 public interface IOProductService {
-    @PostMapping("produce/decrease")
-    public Map<String, String> decrease(@RequestParam("pro_id") Long id,
-                                        @RequestParam("buyNum") Integer buyNum);
+    @PostMapping("admin/decrease")
+    Map<String, String> decrease(@RequestParam("id") Long id,
+                                        @RequestParam("num") Integer buyNum);
 }

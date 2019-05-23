@@ -4,7 +4,7 @@ import com.yong.gmsorder.entity.Orders;
 import com.yong.gmsorder.mapper.OrdersMapper;
 import com.yong.gmsorder.service.IOrdersService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yong.gmsorder.service.feign.ProductService;
+import com.yong.gmsorder.service.feign.ProductClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,12 +27,12 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
     private OrdersMapper ordersMapper;
 
     @Autowired(required = false)
-    private ProductService productService;
+    private ProductClient productClient;
 
     @Override
     public boolean placeOrder(Long produceId, int produceNum) {
         //先执行扣减商品
-        Map<String, String> decrease = productService.decrease(produceId, produceNum);
+        Map<String, String> decrease = productClient.decrease(produceId, produceNum);
         //扣减成功
         if (decrease.get("status").equals("111111")) {
         //再执行添加订单
@@ -41,7 +41,9 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
             orders.setOrderNo(UUID.randomUUID().toString().replaceAll("-","").toUpperCase());
             orders.setProductNo("1");
             orders.setCreateTime(new Date());
+            orders.setPurchase(produceNum);
             this.save(orders);
+            return true;
         }
 
         return false;

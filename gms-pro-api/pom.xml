@@ -8,7 +8,6 @@
         <version>gms-1.0.0</version>
     </parent>
     <artifactId>gms-pro-api</artifactId>
-    <name>gms-pro-api</name>
 
     <dependencies>
         <dependency>
