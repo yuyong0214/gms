@@ -8,8 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gms-order" />
-        <module name="gms-pro" />
         <module name="gms-pro-api" />
+        <module name="gms-user" />
+        <module name="gms-shopping-car" />
+        <module name="gms-pro" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +20,8 @@
       <module name="gms-order" options="" />
       <module name="gms-pro" options="" />
       <module name="gms-pro-api" options="" />
+      <module name="gms-shopping-car" options="" />
+      <module name="gms-user" options="" />
     </option>
   </component>
 </project>

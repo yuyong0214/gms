@@ -23,6 +23,8 @@ public class Product {
     private String productPic;
     private Integer pageView;
     private Integer inventory;
+    private String description;
+    private Integer status;
 }
 
 

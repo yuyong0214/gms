@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/gms-pro/pom.xml" />
         <option value="$PROJECT_DIR$/gms-order/pom.xml" />
         <option value="$PROJECT_DIR$/gms-pro-api/pom.xml" />
+        <option value="$PROJECT_DIR$/gms-shopping-car/pom.xml" />
+        <option value="$PROJECT_DIR$/gms-user/pom.xml" />
       </list>
     </option>
   </component>

@@ -15,6 +15,7 @@ import lombok.ToString;
 @ToString
 public class ShoppingCar {
     private Long id;
+    private Long userId;
     private String productNo;
     private Integer productNum;
     private String productPic;
