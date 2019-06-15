@@ -1,0 +1,17 @@
+server:
+  port: 9000
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+  application:
+    name: gms-gateway-server
+zuul:
+  routes:
+    pro-server:
+      path: /pro/**
+      serviceId: gms-pro-server
+    order-server:
+      path: /order/**
+      serviceId: gms-order-server
+  ignored-services: '*'

@@ -37,7 +37,6 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
         if (decrease.get("status").equals("111111")) {
         //再执行添加订单
             Orders orders = new Orders();
-            orders.setId(23L);
             orders.setOrderNo(UUID.randomUUID().toString().replaceAll("-","").toUpperCase());
             orders.setProductNo("1");
             orders.setCreateTime(new Date());

@@ -1,10 +1,13 @@
 package com.yong.gmspro.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.springframework.data.annotation.Id;
+
+import java.util.Date;
 
 /**
  * @author: YUY
@@ -15,7 +18,7 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 @ToString
 public class Product {
-    @Id
+    @TableId
     private Long id;
     private String productName;
     private String productNo;
@@ -25,6 +28,8 @@ public class Product {
     private Integer inventory;
     private String description;
     private Integer status;
+    @TableField
+    private Date createTime;
 }
 
 

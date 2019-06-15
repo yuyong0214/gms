@@ -2,15 +2,16 @@ package com.yong.gmsorder.entity;
 
     import java.util.Date;
 
+    import com.baomidou.mybatisplus.annotation.IdType;
+    import com.baomidou.mybatisplus.annotation.TableId;
     import lombok.*;
-    import org.springframework.data.annotation.Id;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Orders{
-    @Id
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     private String orderNo;

@@ -6,11 +6,10 @@ spring:
     url: jdbc:mysql://localhost:3306/gms_orders?useUnicode=true&characterEncoding=utf8
     username: root
     password:
-    type: com.alibaba.druid.pool.DruidDataSource
-  config:
-    name: gms-order-server
   cloud:
     zookeeper:
-      connect-string: 192.168.1.23:2181
+      connect-string: localhost:2181
+  application:
+    name: gms-order-server
 mybatis-plus:
   mapper-locations: classpath:mapper/*Mapper.xml
