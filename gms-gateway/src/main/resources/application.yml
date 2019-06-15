@@ -15,3 +15,14 @@ zuul:
       path: /order/**
       serviceId: gms-order-server
   ignored-services: '*'
+
+
+# 描述：
+# zuul网关 routes路由规则
+# routes 需要接收一个map Map<String, ZuulRoute> routes
+# pro-server 为String类型的key 可以任意填写但是必须保证一致性
+# path 需要指定路由的地址
+# serviceId 为注册中心中的服务名（要保证和注册中心的一致否则不能匹配到路由的服务）
+# ... 详细请查看ZuulRoute方法
+# ignored-services 防止服务被自动的添加
+# ... 详细请查看zuul方法中的详细介绍
