@@ -6,7 +6,6 @@ spring:
     url: jdbc:mysql://localhost:3306/gms-user
     username: root
     password:
-    type: com.alibaba.druid.pool.DruidDataSource
   config:
     name: gms-user-service
   mvc:
