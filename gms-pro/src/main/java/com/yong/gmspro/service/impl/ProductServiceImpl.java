@@ -3,7 +3,7 @@ package com.yong.gmspro.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yong.gmspro.entity.Product;
 import com.yong.gmspro.mapper.ProductMapper;
-import com.yong.gmspro.service.IOProductService;
+import com.yong.gmspro.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date: 2019/5/21 10:48
  */
 @Service
-public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IOProductService {
+public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> implements IProductService {
 
     @Autowired(required = false)
     private ProductMapper productMapper;

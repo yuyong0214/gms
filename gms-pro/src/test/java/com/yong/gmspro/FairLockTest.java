@@ -131,7 +131,7 @@ public class FairLockTest {
 
 
     public static void main(String args[]) throws InterruptedException {
-        // 设置线程池
+        // 设置线程池newFixedThreadPool固定的线程数量
         ExecutorService service = Executors.newFixedThreadPool(10);
         for (int i = 0;i<4;i++){
             service.execute(()-> {

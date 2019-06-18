@@ -10,7 +10,16 @@ spring:
     password:
   cloud:
     zookeeper:
-      connect-string: localhost:2181
+      connect-string: 192.168.1.23:2181
+  freemarker:
+    suffix: .html
+
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*Mapper.xml
+logging:
+  level:
+    com:
+      yong:
+        gmspro:
+          mapper: debug
